@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="craterSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <linearGradient id="craterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="70%" stop-color="#166534"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#craterSky)"/>
+  <!-- Volcano cone profile -->
+  <path d="M0,320 Q200,160 300,190 Q400,160 600,320 L600,400 L0,400 Z" fill="url(#craterGrad)"/>
+  <!-- Phra Suphattharabophit Buddha Statue Silhouette on summit -->
+  <path d="M292,165 Q300,150 308,165 Q315,185 285,185 Z" fill="#f59e0b"/>
+  <!-- Suspension Bridge across lava crater -->
+  <path d="M120,290 Q300,330 480,290" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="120" y1="260" x2="120" y2="310" stroke="#94a3b8" stroke-width="6"/>
+  <line x1="480" y1="260" x2="480" y2="310" stroke="#94a3b8" stroke-width="6"/>
+  <!-- Bridge suspender wires -->
+  <line x1="200" y1="285" x2="200" y2="305" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="300" y1="280" x2="300" y2="330" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="400" y1="285" x2="400" y2="305" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- Badge -->
+  <rect x="30" y="30" width="180" height="32" rx="16" fill="#0284c7" fill-opacity="0.95"/>
+  <text x="120" y="51" fill="#ffffff" font-family="'Prompt', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">วนอุทยานเขากระโดง</text>
+</svg>

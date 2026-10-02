@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="kuyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c0519"/>
+      <stop offset="50%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="#18181b"/>
+  <!-- Traditional Kantruem fiddle & Kuy textile motifs -->
+  <circle cx="300" cy="200" r="140" fill="url(#kuyGrad)" opacity="0.4"/>
+  <!-- Kantruem Bow and Instrument representation -->
+  <rect x="290" y="80" width="20" height="240" rx="6" fill="#f59e0b"/>
+  <circle cx="300" cy="250" r="45" fill="#78350f" stroke="#d97706" stroke-width="4"/>
+  <line x1="220" y1="160" x2="380" y2="280" stroke="#fde68a" stroke-width="3"/>
+  <!-- Badge -->
+  <rect x="30" y="30" width="170" height="32" rx="16" fill="#be123c" fill-opacity="0.95"/>
+  <text x="115" y="51" fill="#ffffff" font-family="'Prompt', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">ชาติพันธุ์กวย กันตรึม</text>
+</svg>

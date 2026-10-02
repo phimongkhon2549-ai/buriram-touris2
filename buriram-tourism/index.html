@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>หน้าแรก | ศูนย์รวมข้อมูลท่องเที่ยวชุมชนจังหวัดบุรีรัมย์ (Buriram Community Tourism)</title>
+  <meta name="description" content="สัมผัสเสน่ห์วิถีชีวิต อารยธรรมขอมโบราณ ภูมิปัญญาทอผ้าไหม และธรรมชาติอันอุดมสมบูรณ์ของชุมชนท่องเที่ยวจังหวัดบุรีรัมย์ ดินแดนภูเขาไฟและปราสาทหินพันปี" />
+  <meta name="keywords" content="ท่องเที่ยวชุมชนบุรีรัมย์, ผ้าภูอัคนี, บ้านเจริญสุข, บ้านสนวนนอก, ปราสาทพนมรุ้ง, เขากระโดง, โฮมสเตย์บุรีรัมย์, CBT บุรีรัมย์" />
+  <meta name="author" content="ศูนย์ข้อมูลท่องเที่ยวชุมชนจังหวัดบุรีรัมย์" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ศูนย์รวมข้อมูลท่องเที่ยวชุมชนจังหวัดบุรีรัมย์ — วิถีถิ่นอีสานใต้" />
+  <meta property="og:description" content="รวมข้อมูลท่องเที่ยวเชิงวัฒนธรรม วิถีชีวิตผ้าไหมมัดหมี่ ดินภูเขาไฟ และสภาพอากาศแบบเรียลไทม์ในจังหวัดบุรีรัมย์" />
+  <meta property="og:image" content="assets/images/og-buriram-tourism.svg" />
+  <meta property="og:url" content="https://buriram-cbt.go.th/index.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            buriram: {
+              navy: '#0e2a47',
+              blue: '#1c4b77',
+              ochre: '#c25e00',
+              gold: '#d97706'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex flex-col min-h-screen">
+
+  <!-- Header & Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3 group focus-visible:outline-none" aria-label="กลับสู่หน้าแรก ศูนย์รวมข้อมูลท่องเที่ยวชุมชนจังหวัดบุรีรัมย์">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 p-0.5 shadow-md flex items-center justify-center">
+            <img src="assets/images/buriram-emblem.svg" alt="ตราสัญลักษณ์ท่องเที่ยวชุมชนบุรีรัมย์" class="w-10 h-10 object-contain rounded-xl" />
+          </div>
+          <div>
+            <span class="block text-lg font-bold font-heading text-slate-900 dark:text-white leading-tight group-hover:text-amber-600 transition">
+              ท่องเที่ยวชุมชนบุรีรัมย์
+            </span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400">
+              Buriram Community Tourism
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-2" aria-label="เมนูหลัก">
+          
+          <a href="index.html" class="nav-link px-3 py-2 text-sm transition flex items-center gap-1.5 text-amber-600 dark:text-amber-400 font-bold border-b-2 border-amber-600 dark:border-amber-400" aria-current="page">
+            <i class="fa-solid fa-house text-xs"></i> หน้าแรก
+          </a>
+        
+          <a href="attractions.html" class="nav-link px-3 py-2 text-sm transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 font-medium" >
+            <i class="fa-solid fa-map-location-dot text-xs"></i> แหล่งท่องเที่ยวชุมชน
+          </a>
+        
+          <a href="contact.html" class="nav-link px-3 py-2 text-sm transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 font-medium" >
+            <i class="fa-solid fa-envelope text-xs"></i> ติดต่อเรา
+          </a>
+        
+        </nav>
+
+        <!-- Right Action Controls (Theme Toggle & CTA) -->
+        <div class="flex items-center gap-3">
+          <!-- Dark/Light Mode Button -->
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="สลับโหมดสว่างและโหมดกลางคืน" title="สลับโหมดสว่าง/กลางคืน">
+            <i class="theme-toggle-icon fa-solid fa-moon text-sm"></i>
+          </button>
+
+          <!-- Desktop Quick Hotline CTA -->
+          <a href="tel:044602299" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-amber-600 hover:bg-amber-700 text-white shadow-sm transition">
+            <i class="fa-solid fa-phone"></i> สายด่วน 044-602-299
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button type="button" id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 transition" aria-expanded="false" aria-controls="mobile-menu" aria-label="เปิดเมนูนำทาง">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-base"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2">
+      <nav class="space-y-1" aria-label="เมนูบนมือถือ">
+        
+          <a href="index.html" class="px-4 py-3 rounded-xl text-base transition flex items-center gap-3 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 font-bold">
+            <i class="fa-solid fa-house w-5 text-center text-amber-600"></i> หน้าแรก
+          </a>
+        
+          <a href="attractions.html" class="px-4 py-3 rounded-xl text-base transition flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+            <i class="fa-solid fa-map-location-dot w-5 text-center text-amber-600"></i> แหล่งท่องเที่ยวชุมชน
+          </a>
+        
+          <a href="contact.html" class="px-4 py-3 rounded-xl text-base transition flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+            <i class="fa-solid fa-envelope w-5 text-center text-amber-600"></i> ติดต่อเรา
+          </a>
+        
+      </nav>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800">
+        <a href="tel:044602299" class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold bg-amber-600 text-white shadow-sm">
+          <i class="fa-solid fa-phone"></i> ติดต่อสายด่วนท่องเที่ยว 044-602-299
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative bg-slate-950 text-white overflow-hidden py-20 lg:py-32" aria-labelledby="hero-title">
+      <!-- Background Graphic -->
+      <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+        <img src="assets/images/buriram-hero-banner.svg" alt="ทัศนียภาพปราสาทหินพนมรุ้งและภูเขาไฟบุรีรัมย์" class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Hero Left Content -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 backdrop-blur">
+              <i class="fa-solid fa-gem text-amber-400"></i> ดินแดนภูเขาไฟและอารยธรรมขอมพันปี
+            </div>
+            
+            <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight tracking-tight text-white">
+              ศูนย์รวมข้อมูลท่องเที่ยวชุมชน<br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                จังหวัดบุรีรัมย์
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-sans font-light">
+              เปิดประสบการณ์สัมผัสวิถีถิ่นอีสานใต้ เรียนรู้ภูมิปัญญาการย้อมผ้าภูอัคนีด้วยดินภูเขาไฟ สาวไหมโบราณ ลิ้มรสอาหารพื้นบ้าน และพักผ่อนในโฮมสเตย์มาตรฐานที่อบอุ่นดั่งคนในครอบครัว
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="attractions.html" class="px-6 py-3.5 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition shadow-lg shadow-amber-600/30 flex items-center gap-2">
+                <i class="fa-solid fa-compass"></i> สำรวจแหล่งท่องเที่ยวชุมชน
+              </a>
+              <a href="contact.html" class="px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur transition border border-white/20 flex items-center gap-2">
+                <i class="fa-solid fa-comments"></i> ติดต่อประสานงานท่องเที่ยว
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right: Live Weather Mini Card -->
+          <div class="lg:col-span-4">
+            <div class="p-6 rounded-3xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/80 shadow-2xl space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-700/80 pb-3">
+                <span class="text-xs font-semibold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-indicator"></span> สภาพอากาศวันนี้
+                </span>
+                <span class="text-xs text-slate-400">อัปเดตเรียลไทม์</span>
+              </div>
+
+              <!-- Weather Mini Container (Handled by JS via Open-Meteo) -->
+              <div id="weather-mini-widget" class="min-h-[90px] flex items-center justify-center">
+                <div class="text-xs text-slate-400 flex items-center gap-2">
+                  <i class="fa-solid fa-spinner fa-spin"></i> กำลังโหลดสภาพอากาศ...
+                </div>
+              </div>
+
+              <div class="text-[11px] text-slate-400 flex items-center justify-between pt-2">
+                <span>ข้อมูลจาก Open-Meteo API</span>
+                <a href="attractions.html#weather-section" class="text-amber-400 hover:underline">ดูพยากรณ์ 3 วัน</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="relative z-10 -mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="สถิติและข้อมูลชุมชนท่องเที่ยว">
+      <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-slate-200/80 dark:border-slate-700 p-6 md:p-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100 dark:divide-slate-700">
+          <div class="p-2">
+            <div class="text-3xl md:text-4xl font-extrabold font-heading text-amber-600 dark:text-amber-400">23</div>
+            <div class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 mt-1">อำเภอครอบคลุมทั่วจังหวัด</div>
+          </div>
+          <div class="p-2">
+            <div class="text-3xl md:text-4xl font-extrabold font-heading text-amber-600 dark:text-amber-400">50+</div>
+            <div class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 mt-1">หมู่บ้านท่องเที่ยวชุมชน (CBT)</div>
+          </div>
+          <div class="p-2">
+            <div class="text-3xl md:text-4xl font-extrabold font-heading text-amber-600 dark:text-amber-400">12</div>
+            <div class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 mt-1">รางวัลการันตีระดับประเทศ</div>
+          </div>
+          <div class="p-2">
+            <div class="text-3xl md:text-4xl font-extrabold font-heading text-amber-600 dark:text-amber-400">100%</div>
+            <div class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 mt-1">รายได้หมุนเวียนสู่ชาวบ้าน</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Attractions Section (3 จุดไฮไลท์) -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-labelledby="featured-title">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 px-3.5 py-1.5 rounded-full">
+          Must Visit CBT Highlights
+        </span>
+        <h2 id="featured-title" class="text-2xl sm:text-4xl font-bold font-heading text-slate-900 dark:text-white mt-3 mb-4">
+          3 ชุมชนท่องเที่ยวไฮไลท์ที่ไม่ควรพลาด
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+          สัมผัสมนต์เสน่ห์การท่องเที่ยวแบบเจาะลึกที่ได้รับมาตรฐานการท่องเที่ยวโดยชุมชนระดับยอดเยี่ยม
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Highlight 1: Ban Charoen Suk -->
+        <article class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col card-hover-effect">
+          <div class="relative h-60 img-zoom-container bg-slate-100 dark:bg-slate-700">
+            <img src="assets/images/charoen-suk-volcano-silk.svg" alt="ชุมชนบ้านเจริญสุข ผ้าภูอัคนี ดินภูเขาไฟ อ.เฉลิมพระเกียรติ จ.บุรีรัมย์" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-amber-600 text-white shadow-sm">
+              หัตถกรรมและผ้าไหม
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-location-dot text-amber-600"></i> อ.เฉลิมพระเกียรติ
+              </div>
+              <h3 class="text-xl font-bold font-heading text-slate-900 dark:text-white mb-2">
+                ชุมชนบ้านเจริญสุข (ผ้าภูอัคนี)
+              </h3>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                ดินภูเขาไฟอังคารโบราณ หนึ่งเดียวในไทย
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
+                สัมผัสการนำดินภูเขาไฟที่ดับสนิทมาย้อมผ้าไหมและผ้าฝ้าย ได้สีดินเผาอบอุ่นอันเป็นอัตลักษณ์ และร่วมกิจกรรมพาแลงกับคนในชุมชน
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 dark:text-slate-400"><i class="fa-solid fa-phone text-emerald-600"></i> 089-625-5464</span>
+              <a href="attractions.html" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">
+                อ่านต่อ <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Highlight 2: Ban Sanuan Nok -->
+        <article class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col card-hover-effect">
+          <div class="relative h-60 img-zoom-container bg-slate-100 dark:bg-slate-700">
+            <img src="assets/images/sanuan-nok-silk-village.svg" alt="ชุมชนท่องเที่ยวบ้านสนวนนอก ไหมสาวโบราณ อ.ห้วยราช จ.บุรีรัมย์" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-sm">
+              วัฒนธรรมและวิถีชีวิต
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-location-dot text-amber-600"></i> อ.ห้วยราช
+              </div>
+              <h3 class="text-xl font-bold font-heading text-slate-900 dark:text-white mb-2">
+                ชุมชนท่องเที่ยวบ้านสนวนนอก
+              </h3>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                นั่งรถอีแต๋น สัมผัสวิถีสาวไหมเส้นทอง
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
+                หมู่บ้านเขมรโบราณที่มีชีวิต ชมการสาวไหมด้วยมือ ทอผ้าหางกระรอกคู่ และลิ้มรสดักแด้ทอดกรอบสมุนไพรอันเลื่องชื่อ
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 dark:text-slate-400"><i class="fa-solid fa-phone text-emerald-600"></i> 080-602-4468</span>
+              <a href="attractions.html" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">
+                อ่านต่อ <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Highlight 3: Ban Kok Mueang -->
+        <article class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col card-hover-effect">
+          <div class="relative h-60 img-zoom-container bg-slate-100 dark:bg-slate-700">
+            <img src="assets/images/kok-mueang-ancient-village.svg" alt="ชุมชนบ้านโคกเมือง ปราสาทเมืองต่ำ เสื่อกก อ.ประโคนชัย จ.บุรีรัมย์" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-sky-600 text-white shadow-sm">
+              ประวัติศาสตร์และอารยธรรม
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-location-dot text-amber-600"></i> อ.ประโคนชัย
+              </div>
+              <h3 class="text-xl font-bold font-heading text-slate-900 dark:text-white mb-2">
+                ชุมชนบ้านโคกเมือง
+              </h3>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                ใต้เงาปราสาทเมืองต่ำ ทอเสื่อกกลายขอม
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
+                ชุมชนที่เคียงคู่กับปราสาทหินเมืองต่ำ ปั่นจักรยานเลียบบารายโบราณพันปี และเรียนรู้การทอเสื่อกกย้อมสีธรรมชาติ
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 dark:text-slate-400"><i class="fa-solid fa-phone text-emerald-600"></i> 088-581-2234</span>
+              <a href="attractions.html" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">
+                อ่านต่อ <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="attractions.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-semibold text-sm transition shadow-sm">
+          <i class="fa-solid fa-grid-2"></i> ดูแหล่งท่องเที่ยวชุมชนทั้งหมดในบุรีรัมย์
+        </a>
+      </div>
+    </section>
+
+    <!-- Cultural Pillars Section -->
+    <section class="py-16 bg-slate-100/60 dark:bg-slate-800/50 border-y border-slate-200/80 dark:border-slate-800" aria-labelledby="pillars-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 id="pillars-title" class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+            4 เอกลักษณ์โดดเด่นของการท่องเที่ยวชุมชนบุรีรัมย์
+          </h2>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
+            มรดกทางธรรมชาติและภูมิปัญญาที่ส่งต่อมารุ่นสู่รุ่น
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-volcano"></i>
+            </div>
+            <h3 class="font-bold font-heading text-slate-900 dark:text-white text-base mb-2">ดินแดนภูเขาไฟ</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              บุรีรัมย์มีภูเขาไฟที่ดับสนิทถึง 6 ลูก ก่อเกิดแร่ธาตุอุดมสมบูรณ์ในดินสู่ภูมิปัญญาผ้าภูอัคนีและเกษตรอินทรีย์
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+            <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-monument"></i>
+            </div>
+            <h3 class="font-bold font-heading text-slate-900 dark:text-white text-base mb-2">อารยธรรมขอมโบราณ</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              ร่องรอยปราสาทหินทรายพันปีและสระน้ำโบราณ (บาราย) สะท้อนความเจริญรุ่งเรืองและวิถีชลประทานโบราณ
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+            <div class="w-12 h-12 rounded-2xl bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-vest"></i>
+            </div>
+            <h3 class="font-bold font-heading text-slate-900 dark:text-white text-base mb-2">ไหมมัดหมี่หางกระรอก</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              หัตถศิลป์การสาวไหมเส้นทองและทอผ้าไหมหางกระรอกคู่ เอกลักษณ์ของกลุ่มชาติพันธุ์เขมรและไทยอีสาน
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="font-bold font-heading text-slate-900 dark:text-white text-base mb-2">อาหารถิ่นพาแลง</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              รสชาติพื้นถิ่นแท้ๆ กุ้งจ่อมประโคนชัย ขาหมูนางรอง ข้าวเม่าทอด และดักแด้ทรงเครื่องสมุนไพร
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-labelledby="testimonial-title">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 id="testimonial-title" class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+          เสียงตอบรับจากผู้มาเยือนชุมชน
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
+          ความประทับใจจริงจากนักท่องเที่ยวที่ได้ร่วมสัมผัสวิถีชีวิตชุมชนบุรีรัมย์
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 italic leading-relaxed mb-4">
+            "ประทับใจบ้านเจริญสุขมากครับ ได้ทดลองย้อมผ้าภูอัคนีกลับมาเป็นของที่ระลึก คุณยายในหมู่บ้านน่ารักและดูแลอบอุ่นเหมือนลูกหลาน อาหารพาแลงอร่อยสุดๆ"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-600 flex items-center justify-center font-bold text-xs">
+              ณภ
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">คุณณภัทร สุวรรณเวช</div>
+              <div class="text-[11px] text-slate-400">นักท่องเที่ยวจากกรุงเทพฯ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 italic leading-relaxed mb-4">
+            "การนั่งรถอีแต๋นที่บ้านสนวนนอกเป็นไฮไลท์ของทริปนี้ ลมเย็น พักผ่อนท่ามกลางทุ่งนา และได้ชมการสาวไหมแท้ๆ ที่หาดูได้ยากมากในปัจจุบัน แนะนำเลยค่ะ"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-600 flex items-center justify-center font-bold text-xs">
+              กม
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">คุณกมลพร รัตนศิริ</div>
+              <div class="text-[11px] text-slate-400">กลุ่มทัศนศึกษาเพื่อการเรียนรู้</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-sm">
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 italic leading-relaxed mb-4">
+            "พักโฮมสเตย์ที่บ้านโคกเมือง ตื่นเช้ามาปั่นจักรยานชมปราสาทเมืองต่ำ เงียบสงบมาก อากาศบริสุทธิ์ ข้อมูลในเว็บไซต์นี้ช่วยวางแผนการเดินทางได้แม่นยำมาก"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-sky-500/20 text-sky-600 flex items-center justify-center font-bold text-xs">
+              ธี
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">คุณธีรภัทร ชาญวิทย์</div>
+              <div class="text-[11px] text-slate-400">ช่างภาพท่องเที่ยว</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="rounded-3xl bg-gradient-to-r from-amber-700 via-amber-600 to-orange-600 text-white p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <h2 class="text-2xl sm:text-3xl font-bold font-heading">
+            พร้อมออกเดินทางสัมผัสวิถีชุมชนบุรีรัมย์แล้วหรือยัง?
+          </h2>
+          <p class="text-sm text-amber-100 max-w-xl">
+            สอบถามเส้นทาง แนะนำโปรแกรมทัศนศึกษา หรือจองโฮมสเตย์ล่วงหน้ากับศูนย์ประสานงานเครือข่ายได้ฟรี
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="contact.html" class="px-6 py-3 rounded-2xl bg-white text-amber-800 hover:bg-amber-50 font-semibold text-sm transition shadow-md">
+            ติดต่อสอบถามข้อมูล
+          </a>
+          <a href="attractions.html" class="px-6 py-3 rounded-2xl bg-amber-800/40 hover:bg-amber-800/60 text-white font-semibold text-sm transition border border-white/20">
+            เลือกดูชุมชนทั้งหมด
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Col 1: About Portal -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-600 p-0.5 flex items-center justify-center">
+              <img src="assets/images/buriram-emblem.svg" alt="สัญลักษณ์ท่องเที่ยวชุมชนบุรีรัมย์" class="w-9 h-9 object-contain" />
+            </div>
+            <div>
+              <span class="block text-base font-bold font-heading text-white">ศูนย์ข้อมูลท่องเที่ยวชุมชน</span>
+              <span class="block text-xs text-amber-400">จังหวัดบุรีรัมย์ (CBT Portal)</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            ขับเคลื่อนการท่องเที่ยวโดยชุมชน (Community-Based Tourism) เพื่อการพัฒนาที่ยั่งยืน กระจายรายได้สู่เศรษฐกิจฐานราก และอนุรักษ์มรดกทางวัฒนธรรมเขมรโบราณและภูเขาไฟดินแดนอีสานใต้
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-amber-600 flex items-center justify-center text-slate-300 hover:text-white transition" aria-label="Facebook แฟนเพจ ท่องเที่ยวชุมชนบุรีรัมย์">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-emerald-600 flex items-center justify-center text-slate-300 hover:text-white transition" aria-label="Line Official ท่องเที่ยวชุมชนบุรีรัมย์">
+              <i class="fa-brands fa-line text-sm"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-rose-600 flex items-center justify-center text-slate-300 hover:text-white transition" aria-label="YouTube วิดีโอท่องเที่ยวชุมชนบุรีรัมย์">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white font-heading mb-4 border-l-2 border-amber-500 pl-3">
+            เมนูลัด
+          </h4>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <a href="index.html" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-chevron-right text-[10px] text-amber-500"></i> หน้าแรก
+              </a>
+            </li>
+            <li>
+              <a href="attractions.html" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-chevron-right text-[10px] text-amber-500"></i> แหล่งท่องเที่ยวชุมชน
+              </a>
+            </li>
+            <li>
+              <a href="attractions.html#weather-section" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-chevron-right text-[10px] text-amber-500"></i> สภาพอากาศบุรีรัมย์เรียลไทม์
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-chevron-right text-[10px] text-amber-500"></i> ติดต่อศูนย์ประสานงาน
+              </a>
+            </li>
+            <li>
+              <a href="contact.html#faq-section" class="hover:text-amber-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-chevron-right text-[10px] text-amber-500"></i> คำถามที่พบบ่อย (FAQ)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Highlight Communities -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white font-heading mb-4 border-l-2 border-amber-500 pl-3">
+            ชุมชนท่องเที่ยวยอดนิยม
+          </h4>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <a href="attractions.html" class="hover:text-amber-400 transition block">
+                <span class="font-semibold text-slate-200">บ้านเจริญสุข</span>
+                <span class="block text-slate-400">ผ้าภูอัคนี ย้อมดินภูเขาไฟ</span>
+              </a>
+            </li>
+            <li>
+              <a href="attractions.html" class="hover:text-amber-400 transition block">
+                <span class="font-semibold text-slate-200">บ้านสนวนนอก</span>
+                <span class="block text-slate-400">สาวไหมโบราณ นั่งรถอีแต๋น</span>
+              </a>
+            </li>
+            <li>
+              <a href="attractions.html" class="hover:text-amber-400 transition block">
+                <span class="font-semibold text-slate-200">บ้านโคกเมือง</span>
+                <span class="block text-slate-400">ปราสาทหินเมืองต่ำ ทอเสื่อกก</span>
+              </a>
+            </li>
+            <li>
+              <a href="attractions.html" class="hover:text-amber-400 transition block">
+                <span class="font-semibold text-slate-200">วนอุทยานเขากระโดง</span>
+                <span class="block text-slate-400">สะพานแขวนปากปล่องลาวา</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white font-heading mb-4 border-l-2 border-amber-500 pl-3">
+            ศูนย์ประสานงานเครือข่าย
+          </h4>
+          <ul class="space-y-3 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+              <span>ศาลากลางจังหวัดบุรีรัมย์ ถ.บุรีรัมย์-ประโคนชัย ต.เสม็ด อ.เมือง จ.บุรีรัมย์ 31000</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-amber-500"></i>
+              <a href="tel:044602299" class="hover:text-amber-400">044-602-299, 089-625-5464</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-envelope text-amber-500"></i>
+              <a href="mailto:info@buriram-cbt.go.th" class="hover:text-amber-400">info@buriram-cbt.go.th</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-clock text-amber-500"></i>
+              <span>เปิดทำการทุกวัน: 08:30 - 17:00 น.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 ศูนย์รวมข้อมูลท่องเที่ยวชุมชนจังหวัดบุรีรัมย์. สงวนลิขสิทธิ์ทุกประการตามกฎหมาย</p>
+        <div class="flex items-center gap-4">
+          <span class="hover:text-slate-300">มาตรฐานการท่องเที่ยวโดยชุมชน (CBT Thailand)</span>
+          <span>•</span>
+          <span class="hover:text-slate-300">Open-Meteo API Verified</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" id="back-to-top-btn" class="fixed bottom-6 right-6 z-30 p-3.5 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" aria-label="เลื่อนขึ้นสู่ด้านบนสุด">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- Screen Reader Live Announcer -->
+  <div id="a11y-announcer" class="sr-only" aria-live="polite"></div>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/weather-api.js"></script>
+  <script>
+    // โหลด Mini Weather Widget หน้าแรกด้วย Open-Meteo API
+    document.addEventListener('DOMContentLoaded', () => {
+      loadBuriramWeather('weather-mini-widget', true);
+    });
+  </script>
+</body>
+</html>
